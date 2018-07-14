@@ -1,0 +1,56 @@
+div.hero {
+    /*
+    background-image: url("../img/piggy.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    */
+    position: relative;
+    overflow: hidden;
+    max-height: 100%;
+    width: 100%;
+    height: 66vw;
+    /*display: block;*/
+}
+
+.hero > img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    /*clip-path: rect(calc(3456 - 100vh), 0px, 0px, 0px);*/
+}
+
+.hero > h1 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 10vw;
+    left: 10%;
+}
+
+.hero > h2 {
+    position: relative;
+    margin-top: 17%;
+    left: 13%;
+    font-size: 2vw;
+}
+
+.hero > .button {
+    position: relative;
+    margin-top: 8%;
+    margin-left: 23%;
+    font-size: 2vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+.featured-container {
+    width: 80%;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.donate-button {
+    background-color: #ffdd43;
+}
