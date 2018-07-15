@@ -19,6 +19,6 @@
   "homepage": "https://github.com/kunalJa/Trust-Me#readme",
   "devDependencies": {
     "truffle": "^4.1.13",
-    "web3": "^0.20.0"
+    "web3": "^0.20.6"
   }
 }
