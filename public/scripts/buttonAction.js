@@ -93,7 +93,10 @@ var buttonAction2 = function() {
       if (!error)
         console.log("contract: ", result/1000000000000000000);
     });
-  });
+	});
+	let loadingBar = document.getElementById("loading-bar");
+	loadingBar.style.width = "40%";
+
 }
 
 var buttonAction3 = function() {
