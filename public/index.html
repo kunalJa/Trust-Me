@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/picnic">
-    <link rel="stylesheet" href="css/style.css">
-    <nav>
-        <a href="index.html" class="brand">
-            <span>Trust Me</span>
-        </a>
-        <!-- responsive-->
-        <input id="bmenub" type="checkbox" class="show">
-        <label for="bmenub" class="burger pseudo button">&#8801;</label>
-        <div class="menu">
-            <a href="#" class="pseudo button"></a>
-            <a href="#" class="pseudo button">Login</a>
-        </div>
-    </nav>
-    <div class="hero">
-        <img src="img/piggy.jpg" alt="Piggy Bank">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/picnic">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <div id="top-hero" class="hero">
+        <img id="transition-image-0" class="hero-img" src="img/hero4.jpg">
         <h1>Trust Me</h1>
         <h2>Donate with confidence.</h2>
-        <button href="#" class="button" id="donate">Start a Fund</button>
+        <a href="#" id="donate-fund" class="success button">Donate Now</a><a href="#" id="start-fund" class="button">Start a Fund</a>
     </div>
-    <h1>Featured Fundraisers</h1>
+    <div class="hero2">
+        <img class="hero-img" src="img/dollarsign.jpg" alt="A white neon sign in the shape of the dollar sign at night">
+        <div>
+            <h2>Harness the power of the Ethereum blockchain to provide transaction assurances.</h2>
+        </div>
+    </div>
+    <div class="hero3">
+        <img class="hero-img" src="img/pink.jpg" alt="Solid pink wall">
+        <img id="ethereum-logo" src="img/ETHEREUM_1080.svg">
+        <h1>Donors:</h1>
+        <div>
+            <h2>Donate with the knowledge that your money can only be spent on what you approve.</h2>
+        </div>
+    </div>
+    <div class="hero2">
+        <img class="hero-img" src="img/pencil.jpg" alt="Pencil on dark background">
+        <h1>Fund-seekers:</h1>
+        <div>
+            <h2>Establish trust with your supporters and give them the confidence to make larger contributions.</h2>
+        </div>
+    </div>
+    <h1 class="heading">Featured Fundraisers</h1>
     <div class="featured-container">
-        <div class="flex three">
+        <div class="flex one two-500 three-1000">
             <div>
-                <article class="card">
-                    <img src="img/violin.jpg">
-                    <footer>
-                        <h3>Violin for Band</h3>
-                        <p>Hi. My name is Johnny, and I am...</p>
-                        <button class="donate-button" onclick="buttonAction1()">Donate</buton>
-                    </footer>
-                </article>
+                <label for="modal_1" class="card-anchor">
+                    <article class="card">
+                        <img src="img/violin.jpg">
+                        <footer>
+                            <h3>End Alzheimer's</h3>
+                            <p>Hi. My name is Johnny, and I am...</p>
+                        </footer>
+                    </article>
+                </label>
             </div>
             <div>
                 <article class="card">
@@ -40,7 +50,7 @@
                     <footer>
                         <h3>Violin for Orchestra</h3>
                         <p>Orchestra sucks, but I still need to...</p>
-                        <button class="donate-button" onclick="buttonAction2()">Donate</button>
+                    </footer>
                 </article>
             </div>
             <div>
@@ -49,14 +59,65 @@
                     <footer>
                         <h3>Violin for Freedom</h3>
                         <p>FREEEEEEEEEEEEEEEEEEEEEE...</p>
-                        <button class="donate-button" onclick="buttonAction3()">Donate</button>
+                    </footer>
+                </article>
+            </div>
+            <div>
+                <article class="card">
+                    <img src="img/violin.jpg">
+                    <footer>
+                        <h3>Violin for Freedom</h3>
+                        <p>FREEEEEEEEEEEEEEEEEEEEEE...</p>
+                    </footer>
+                </article>
+            </div>
+            <div>
+                <article class="card">
+                    <img src="img/violin.jpg">
+                    <footer>
+                        <h3>Violin for Freedom</h3>
+                        <p>FREEEEEEEEEEEEEEEEEEEEEE...</p>
+                    </footer>
+                </article>
+            </div>
+            <div>
+                <article class="card">
+                    <img src="img/violin.jpg">
+                    <footer>
+                        <h3>Violin for Freedom</h3>
+                        <p>FREEEEEEEEEEEEEEEEEEEEEE...</p>
+                    </footer>
                 </article>
             </div>
         </div>
     </div>
-    <body>
-        <!--script type="text/javascript" src="scripts/buttonAction.js"></script>-->
-        <script type="text/javascript" src="scripts/buttonAction.js"></script>
-    </body>
 
+    <div class="modal">
+      <input id="modal_1" type="checkbox" />
+      <label for="modal_1" class="overlay"></label>
+      <article>
+        <header>
+          <h3>End Alzheimer's</h3>
+          <label for="modal_1" class="close">&times;</label>
+        </header>
+        <img src="img/violin.jpg">
+        <section class="content">
+          Hi. My name is Johnny, and I am participating in the Walk
+          to End Alzheimer's event in Austin, Texas this year. My
+          grandma was diagnosed when I was 10, and the disease has
+          slowly reduced her independence and freedom. The money
+          being raised at this event will be used to fund research
+          and care for Alzheimer's patients. Please consider donating
+          to this cause.
+        </section>
+        <footer>
+          <a class="success button" href="#">Donate</a>
+          <label for="modal_1" class="button dangerous">
+            Cancel
+          </label>
+        </footer>
+      </article>
+    </div>
+
+    <script src="scripts/image-transition.js"></script>
 </html>
