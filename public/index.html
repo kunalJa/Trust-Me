@@ -3,34 +3,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/picnic">
     <link rel="stylesheet" href="css/style.css">
-    <nav>
-        <a href="index.html" class="brand">
-            <span>Trust Me</span>
-        </a>
-        <!-- responsive-->
-        <input id="bmenub" type="checkbox" class="show">
-        <label for="bmenub" class="burger pseudo button">&#8801;</label>
-        <div class="menu">
-            <a href="#" class="pseudo button"></a>
-            <a href="#" class="pseudo button">Login</a>
-        </div>
-    </nav>
-    <div class="hero">
-        <img src="img/piggy.jpg" alt="Piggy Bank">
+    <div id="top-hero" class="hero">
+        <img id="transition-image-0" class="hero-img" src="img/hero4.jpg">
+        <a href="#" id="start-fund" class="pseudo button">Start a Fund</a><br>
         <h1>Trust Me</h1>
         <h2>Donate with confidence.</h2>
-        <a href="#" class="button">Start a Fund</a>
+        <a href="#" id="donate-fund" class="success button">Donate Now</a>
     </div>
-    <h1>Featured Fundraisers</h1>
+    <div class="hero2">
+        <img class="hero-img" src="img/dollarsign.jpg" alt="A white neon sign in the shape of the dollar sign at night">
+        <div>
+            <h2>Harness the power of the Ethereum blockchain to provide transaction assurances.</h2>
+        </div>
+    </div>
+    <div class="hero3">
+        <img class="hero-img" src="img/pink.jpg" alt="Solid pink wall">
+        <img id="ethereum-logo" src="img/ETHEREUM_1080.svg">
+        <h1>Donors:</h1>
+        <div>
+            <h2>Donate with the knowledge that your money can only be spent on what you approve.</h2>
+        </div>
+    </div>
+    <div class="hero2">
+        <img class="hero-img" src="img/pencil.jpg" alt="Pencil on dark background">
+        <h1>Fund-seekers:</h1>
+        <div>
+            <h2>Establish trust with your supporters and give them the confidence to make larger contributions.</h2>
+        </div>
+    </div>
+    <h1 class="heading">Featured Fundraisers</h1>
     <div class="featured-container">
-        <div class="flex three">
+        <div class="flex one two-500 three-1000">
             <div>
                 <article class="card">
                     <img src="img/violin.jpg">
                     <footer>
-                        <h3>Violin for Band</h3>
+                        <a href="projects/0/"><h3>Violin for Band</h3></a>
                         <p>Hi. My name is Johnny, and I am...</p>
-                        <button class="donate-button">Donate</buton>
+                        <button class="success">Donate</buton>
                     </footer>
                 </article>
             </div>
@@ -40,7 +50,7 @@
                     <footer>
                         <h3>Violin for Orchestra</h3>
                         <p>Orchestra sucks, but I still need to...</p>
-                        <button class="donate-button">Donate</button>
+                        <button class="success">Donate</button>
                 </article>
             </div>
             <div>
@@ -49,10 +59,10 @@
                     <footer>
                         <h3>Violin for Freedom</h3>
                         <p>FREEEEEEEEEEEEEEEEEEEEEE...</p>
-                        <button class="donate-button">Donate</button>
+                        <button class="success">Donate</button>
                 </article>
             </div>
         </div>
     </div>
-    
+    <script src="scripts/image-transition.js"></script>
 </html>

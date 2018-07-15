@@ -1,4 +1,6 @@
-div.hero {
+div.hero,
+div.hero2,
+div.hero3 {
     /*
     background-image: url("../img/piggy.jpg");
     background-size: 100vw;
@@ -12,35 +14,108 @@ div.hero {
     /*display: block;*/
 }
 
-.hero > img {
+.hero-img {
     position: absolute;
     max-width: 100%;
     height: auto;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: -1;
     /*clip-path: rect(calc(3456 - 100vh), 0px, 0px, 0px);*/
 }
 
 .hero > h1 {
     position: absolute;
-    color: rgb(0, 0, 0);
     font-size: 10vw;
     left: 10%;
+    color: white;
 }
 
 .hero > h2 {
     position: relative;
     margin-top: 17%;
-    left: 13%;
+    left: 12.4%;
     font-size: 2vw;
+    color: white;
 }
 
-.hero > .button {
+.hero > #donate-fund {
     position: relative;
-    margin-top: 8%;
-    margin-left: 23%;
+    margin-top: 11%;
+    left: 12.4%;
     font-size: 2vw;
 }
 
-h1 {
+.hero > #start-fund {
+    position: absolute;
+    right: 3%;
+    font-size: 2vw;
+    color: white;
+}
+
+.hero2 > h1 {
+    position: absolute;
+    padding: 0px;
+    margin-top: 2%;
+    left: 40%;
+    font-size: 6vw;
+    color: white;
+}
+
+.hero2 > div {
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    width: 60%;
+    height: 66vw;
+    max-height: 100vh;
+    display: flex;
+    align-content: center;
+}
+
+.hero2 > div > h2 {
+    margin: auto;
+    font-size: 4vw;
+    color: white;
+}
+
+#ethereum-logo {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    right: 6%;
+    width: 30%;
+}
+
+.hero3 > h1 {
+    position: absolute;
+    padding: 0px;
+    margin-top: 2%;
+    left: 10%;
+    font-size: 6vw;
+    color: rgb(0, 0, 0);
+}
+
+.hero3 > div {
+    position: absolute;
+    top: 0px;
+    left: 10%;
+    width: 50%;
+    height: 66vw;
+    max-height: 100vh;
+    display: flex;
+    align-content: center;
+}
+
+.hero3 > div > h2 {
+    margin: auto;
+    font-size: 4vw;
+    color: rgb(0, 0, 0);
+}
+
+.heading {
     text-align: center;
 }
 
@@ -49,8 +124,4 @@ h1 {
     left: 0px;
     right: 0px;
     margin: auto;
-}
-
-.donate-button {
-    background-color: #ffdd43;
 }
