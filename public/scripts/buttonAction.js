@@ -93,7 +93,11 @@ var buttonAction2 = function() {
       if (!error)
         console.log("contract: ", result/1000000000000000000);
     });
-	});
+    web3.eth.sendTransaction({to:"0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147", from:"0x3502b25b195f245c07a9AA16505190B389dFce9f", value:web3.toWei("1", "ether")}, (error, result) => {
+      console.log("hello");
+    });
+   // 0x9fA8a8eE12ECfe1f4f457610076344598611f1a8 donor1
+  });
 	let loadingBar = document.getElementById("loading-bar");
 	loadingBar.style.width = "40%";
 	let moneyRaised = document.getElementById("money-raised");
