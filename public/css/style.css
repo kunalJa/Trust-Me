@@ -48,10 +48,12 @@ div.hero3 {
 }
 
 .hero > #start-fund {
-    position: absolute;
-    right: 3%;
+    position: relative;
+    margin-top: 11%;
+    left: 13%;
     font-size: 2vw;
     color: white;
+    background-color: black;
 }
 
 .hero2 > h1 {
@@ -117,6 +119,7 @@ div.hero3 {
 
 .heading {
     text-align: center;
+    font-size: 6vw;
 }
 
 .featured-container {
@@ -124,4 +127,8 @@ div.hero3 {
     left: 0px;
     right: 0px;
     margin: auto;
+}
+
+.card-anchor {
+    color: black;
 }
