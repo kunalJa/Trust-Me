@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/picnic">
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/buttonAction.js"></script>
     <nav>
         <a href="index.html" class="brand">
             <span>Trust Me</span>
@@ -20,7 +19,7 @@
         <img src="img/piggy.jpg" alt="Piggy Bank">
         <h1>Trust Me</h1>
         <h2>Donate with confidence.</h2>
-        <button href="#" class="button" id="donate" onclick="buttonAction">Start a Fund</button>
+        <button href="#" class="button" id="donate">Start a Fund</button>
     </div>
     <h1>Featured Fundraisers</h1>
     <div class="featured-container">
@@ -31,7 +30,7 @@
                     <footer>
                         <h3>Violin for Band</h3>
                         <p>Hi. My name is Johnny, and I am...</p>
-                        <button class="donate-button">Donate</buton>
+                        <button class="donate-button" onclick="buttonAction1()">Donate</buton>
                     </footer>
                 </article>
             </div>
@@ -41,7 +40,7 @@
                     <footer>
                         <h3>Violin for Orchestra</h3>
                         <p>Orchestra sucks, but I still need to...</p>
-                        <button class="donate-button">Donate</button>
+                        <button class="donate-button" onclick="buttonAction2()">Donate</button>
                 </article>
             </div>
             <div>
@@ -50,10 +49,14 @@
                     <footer>
                         <h3>Violin for Freedom</h3>
                         <p>FREEEEEEEEEEEEEEEEEEEEEE...</p>
-                        <button class="donate-button">Donate</button>
+                        <button class="donate-button" onclick="buttonAction3()">Donate</button>
                 </article>
             </div>
         </div>
     </div>
+    <body>
+        <!--script type="text/javascript" src="scripts/buttonAction.js"></script>-->
+        <script type="text/javascript" src="scripts/buttonAction.js"></script>
+    </body>
 
 </html>
