@@ -96,7 +96,8 @@ var buttonAction2 = function() {
 	});
 	let loadingBar = document.getElementById("loading-bar");
 	loadingBar.style.width = "40%";
-
+	let moneyRaised = document.getElementById("money-raised");
+	moneyRaised.innerHTML = "$52 raised"
 }
 
 var buttonAction3 = function() {
