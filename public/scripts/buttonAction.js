@@ -62,17 +62,17 @@ const abi = [
 	}
 ];
 
-const myContractAddress = "0xfab958d10af58fb26c8f0f7ae1912ccbb0ee569c";
+const myContractAddress = "0xbb52f0eae5fef07dc52a10e597ea2301cd7a4900";
 var myContract = web3.eth.contract(abi);
 contractInstance = myContract.at(myContractAddress);
 
 var buttonAction1 = function() {
-  contractInstance.initializeFundraiser(0x92F52f890a70fB3c0cF23E1777464cec415108A4, (err, result) => {
-    web3.eth.getBalance("0x92F52f890a70fB3c0cF23E1777464cec415108A4", (error, result) => {
+  contractInstance.initializeFundraiser(0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147, (err, result) => {
+    web3.eth.getBalance("0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147", (error, result) => {
       if (!error)
       console.log("charity: ", result/1000000000000000000);
     });
-    web3.eth.getBalance("0xfab958d10af58fb26c8f0f7ae1912ccbb0ee569c", (error, result) => {
+    web3.eth.getBalance("0xbb52f0eae5fef07dc52a10e597ea2301cd7a4900", (error, result) => {
       if (!error)
         console.log("contract: ", result/1000000000000000000);
     });
@@ -80,16 +80,38 @@ var buttonAction1 = function() {
 }
 
 var buttonAction2 = function() {
-  contractInstance.donate(1, 0x92F52f890a70fB3c0cF23E1777464cec415108A4, {
+  contractInstance.donate(1, 0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147, {
     gas: 300000,
     from: web3.eth.accounts[0],
     value: web3.toWei(1, "ether")
     }, (err, result) => {
-    web3.eth.getBalance("0x92F52f890a70fB3c0cF23E1777464cec415108A4", (error, result) => {
+    web3.eth.getBalance("0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147", (error, result) => {
       if (!error)
       console.log("charity: ", result/1000000000000000000);
     });
-    web3.eth.getBalance("0xfab958d10af58fb26c8f0f7ae1912ccbb0ee569c", (error, result) => {
+    web3.eth.getBalance("0xbb52f0eae5fef07dc52a10e597ea2301cd7a4900", (error, result) => {
+      if (!error)
+        console.log("contract: ", result/1000000000000000000);
+    });
+  });
+	let loadingBar = document.getElementById("loading-bar");
+	loadingBar.style.width = "40%";
+	let moneyRaised = document.getElementById("money-raised");
+	moneyRaised.innerHTML = "1 Ether raised"
+}
+
+var buttonAction3 = function() {
+  contractInstance.withdraw(0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147, {
+    gasLimit: 1000000
+    }, (err, result) => {
+    if (!err) {
+      console.log("GFG");
+    }
+    web3.eth.getBalance("0xa6Bdc9CFc79d4fd1906bCc98daf8203b89D93147", (error, result) => {
+      if (!error)
+      console.log("charity: ", result/1000000000000000000);
+    });
+    web3.eth.getBalance("0xbb52f0eae5fef07dc52a10e597ea2301cd7a4900", (error, result) => {
       if (!error)
         console.log("contract: ", result/1000000000000000000);
     });
@@ -97,27 +119,5 @@ var buttonAction2 = function() {
       console.log("hello");
     });
    // 0x9fA8a8eE12ECfe1f4f457610076344598611f1a8 donor1
-  });
-	let loadingBar = document.getElementById("loading-bar");
-	loadingBar.style.width = "40%";
-	let moneyRaised = document.getElementById("money-raised");
-	moneyRaised.innerHTML = "$52 raised"
-}
-
-var buttonAction3 = function() {
-  contractInstance.withdraw(0x92F52f890a70fB3c0cF23E1777464cec415108A4, {
-    gasLimit: 1000000
-    }, (err, result) => {
-    if (!err) {
-      console.log("GFG");
-    }
-    web3.eth.getBalance("0x92F52f890a70fB3c0cF23E1777464cec415108A4", (error, result) => {
-      if (!error)
-      console.log("charity: ", result/1000000000000000000);
-    });
-    web3.eth.getBalance("0xfab958d10af58fb26c8f0f7ae1912ccbb0ee569c", (error, result) => {
-      if (!error)
-        console.log("contract: ", result/1000000000000000000);
-    });
   });
 }
