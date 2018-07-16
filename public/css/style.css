@@ -40,14 +40,14 @@ div.hero3 {
     color: white;
 }
 
-.hero > #donate-fund {
+#donate-fund {
     position: relative;
     margin-top: 11%;
     left: 12.4%;
     font-size: 2vw;
 }
 
-.hero > #start-fund {
+#start-fund {
     position: relative;
     margin-top: 11%;
     left: 13%;
@@ -152,11 +152,45 @@ div.hero3 {
     background-color: black;
     border-radius: 13px; /* (height of inner div) / 2 + padding */
     padding: 3px;
-  }
+}
   
-  #progressbar > div {
-     background-color: rgb(75, 233, 75);
-     width: 0%; /* Adjust with JavaScript */
-     height: 20px;
-     border-radius: 10px;
-  }
+#progressbar > div {
+    background-color: rgb(75, 233, 75);
+    width: 0%; /* Adjust with JavaScript */
+    height: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .hero > h1 {
+        text-align: center;
+        font-size: 19vw;
+    }
+    .hero > h2 {
+        margin-top: 32%;
+        /*top: 40vw;*/
+        left: 14.2%;
+        font-size: 5vw;
+    }
+    #donate-fund {
+        position: absolute;
+        margin-top: 0%;
+        font-size: 4vw;
+        left: 17%;
+    }
+    #start-fund {
+        position: absolute;
+        margin-top: 0%;
+        font-size: 4vw;
+        /*left: 24%;*/
+        left: auto;
+        right: 17%;
+    }
+    .hero > .sign-in {
+        position: absolute;
+        top: 82%;
+        /*margin-top: 6%;*/
+        left: 17%;
+        font-size: 3vw;
+    }
+}
