@@ -71,15 +71,6 @@ div.hero3 {
     text-decoration: underline;
 }
 
-.hero2 > h1 {
-    position: absolute;
-    padding: 0px;
-    margin-top: 2%;
-    left: 40%;
-    font-size: 6vw;
-    color: white;
-}
-
 .hero2 > div {
     position: absolute;
     top: 0px;
@@ -88,7 +79,14 @@ div.hero3 {
     height: 66vw;
     max-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
+}
+
+.hero2 > div > h1 {
+    padding: 0px;
+    font-size: 6vw;
+    color: white;
 }
 
 .hero2 > div > h2 {
@@ -106,15 +104,6 @@ div.hero3 {
     width: 30%;
 }
 
-.hero3 > h1 {
-    position: absolute;
-    padding: 0px;
-    margin-top: 2%;
-    left: 10%;
-    font-size: 6vw;
-    color: rgb(0, 0, 0);
-}
-
 .hero3 > div {
     position: absolute;
     top: 0px;
@@ -123,7 +112,14 @@ div.hero3 {
     height: 66vw;
     max-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
+}
+
+.hero3 > div > h1 {
+    padding: 0px;
+    font-size: 6vw;
+    color: rgb(0, 0, 0);
 }
 
 .hero3 > div > h2 {
